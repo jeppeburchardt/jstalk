@@ -1,0 +1,10 @@
+{
+  "name": "jstalk",
+  "version": "0.0.1",
+  "dependencies": {
+    "optimist": "",
+    "cli-color": "",
+    "node-stringprep": "",
+    "simple-xmpp": ""
+  }
+}

@@ -1,7 +1,7 @@
 var argv = require('optimist')
     .usage('Usage: $0 -u [str] email -s [str] server -p port [num]')
-    .demand(['u'])
-    .default({s:'talk.google.com', p:5223})
+    // .demand(['u'])
+    .default({s:'talk.google.com', p:5222})
     .argv;
 
 var passInput = require('../lib/password.js');
@@ -18,27 +18,26 @@ var ti = 0;
 
 passInput.getPassword('Password: ', function(input){
 	pass = input;
-	console.log('logging in to %s', host);
-
-	controller.connect(user, pass, host, port);
+	
+	controller.setModel(model);
+	controller.connect('test.jeppe.burchardt@gmail.com', 'jeppetester', host, port);
+	// controller.connect(user, pass, host, port);
 
 	view.setModel(model);
 	view.initInput();
 
 	view.on('input', function (data) {
-		// console.log('to xmpp: ' + data.msg);
 		model.addChatEntry(data.jid, 'to', data.msg);
+		controller.send(data.jid, data.msg);
 	});
 
-	// model.dummyData();
+	view.on('status', function (data) {
+		controller.setStatus(data.status, data.text);
+	});
 
-	// setInterval(function() {
-	// 	model.addChatEntry('person3@some-domain.com', 'from', (++ti) + 'Hey hvad så? Lorem ipsum dolor sit :) amet');
-	// }, 10000);
-
-	// setTimeout(function(){
-	// 	model.changeStatus('person1@gmail.com', 'online');
-	// }, 5000);
+	view.on('composing', function (data) {
+		controller.setChatState(data.to, 'composing');
+	});
 
 })
 
