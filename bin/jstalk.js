@@ -1,6 +1,6 @@
 var argv = require('optimist')
     .usage('Usage: $0 -u [str] email -s [str] server -p port [num]')
-    // .demand(['u'])
+    .demand(['u'])
     .default({s:'talk.google.com', p:5222})
     .argv;
 
@@ -20,8 +20,8 @@ passInput.getPassword('Password: ', function(input){
 	pass = input;
 	
 	controller.setModel(model);
-	controller.connect('test.jeppe.burchardt@gmail.com', 'jeppetester', host, port);
-	// controller.connect(user, pass, host, port);
+	// controller.connect('test.jeppe.burchardt@gmail.com', 'jeppetester', host, port);
+	controller.connect(user, pass, host, port);
 
 	view.setModel(model);
 	view.initInput();
