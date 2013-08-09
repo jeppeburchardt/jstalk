@@ -6,5 +6,8 @@
     "cli-color": "",
     "node-stringprep": "",
     "simple-xmpp": ""
+  },
+  "bin": {
+    "jstalk": "./bin/jstalk"
   }
 }
