@@ -7,7 +7,7 @@ var argv = require('optimist')
 var passInput = require('../lib/password.js');
 var model = require('../lib/model.js');
 var view = require('../lib/view.js');
-var controller = require('../lib/controller2.js');
+var controller = require('../lib/controller.js');
 
 var user = argv.u,
 	pass = 0,
@@ -20,8 +20,8 @@ passInput.getPassword('Password: ', function(input){
 	pass = input;
 	
 	controller.setModel(model);
-	 controller.connect('test.jeppe.burchardt@gmail.com', 'jeppetester', host, port);
-	// controller.connect(user, pass, host, port);
+	 // controller.connect('test.jeppe.burchardt@gmail.com', 'jeppetester', host, port);
+	controller.connect(user, pass, host, port);
 
 	view.setModel(model);
 	view.initInput();
