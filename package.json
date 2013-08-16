@@ -4,8 +4,8 @@
   "dependencies": {
     "optimist": "",
     "cli-color": "",
-    "node-stringprep": "",
-    "simple-xmpp": ""
+    "simple-xmpp": "",
+    "wordwrap":"0.0.2"
   },
   "bin": {
     "jstalk": "./bin/jstalk"
