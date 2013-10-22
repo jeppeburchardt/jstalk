@@ -20,7 +20,6 @@ passInput.getPassword('Password: ', function(input){
 	pass = input;
 	
 	controller.setModel(model);
-	 // controller.connect('test.jeppe.burchardt@gmail.com', 'jeppetester', host, port);
 	controller.connect(user, pass, host, port);
 
 	view.setModel(model);
