@@ -4,7 +4,7 @@
   "dependencies": {
     "optimist": "",
     "cli-color": "",
-    "simple-xmpp": "",
+    "node-xmpp": "",
     "wordwrap":"0.0.2"
   },
   "bin": {
