@@ -31,6 +31,10 @@ passInput.getPassword('Password: ', function(input){
 		controller.send(data.jid, data.msg);
 	});
 
+	view.on('command', function (line) {
+
+	});
+
 	view.on('status', function (data) {
 		controller.setStatus(data.status, data.text);
 	});
