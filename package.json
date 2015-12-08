@@ -2,12 +2,28 @@
   "name": "jstalk",
   "version": "0.0.1",
   "dependencies": {
-    "optimist": "",
     "cli-color": "",
-    "node-xmpp": "",
-    "wordwrap":"0.0.2"
+    "node-xmpp-client": "^3.0.0",
+    "optimist": "",
+    "wordwrap": "0.0.2"
   },
   "bin": {
     "jstalk": "./bin/jstalk"
-  }
+  },
+  "description": "Commandline interface for jabber",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kosmobot/jstalk.git"
+  },
+  "author": "Jeppe Burchardt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kosmobot/jstalk/issues"
+  },
+  "homepage": "https://github.com/kosmobot/jstalk#readme"
 }
