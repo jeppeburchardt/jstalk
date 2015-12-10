@@ -8,6 +8,7 @@ var passInput = require('../lib/password.js');
 var model = require('../lib/model.js');
 var view = require('../lib/view.js');
 var controller = require('../lib/controller.js');
+var store = require('../lib/store');
 
 var user = argv.u,
 	pass = 0,
