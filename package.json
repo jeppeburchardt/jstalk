@@ -5,6 +5,7 @@
     "cli-color": "",
     "node-xmpp-client": "^3.0.0",
     "optimist": "",
+    "redux": "^3.0.4",
     "wordwrap": "0.0.2"
   },
   "bin": {
